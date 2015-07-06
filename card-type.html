@@ -9,29 +9,55 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
 
     <style media="screen">
+      /* Let's add some code to make the form stand out */
       form {
         width: 300px;
-        position: relative; }
+        position: relative;
+        left: 50%;
+        margin-left: -150px;
+        background-color: #eee;
+        padding: 1em;
+        border-radius: 1em;
+        margin-top: 2em;
+      }
 
       #card-number {
-        border: 1px solid #ddd;
+        position: relative;
         height: 2em;
-        padding: 0 0.5em; }
+        border: 1px solid #ddd;
+        padding: 0 0.5em;
+        background-color: white;
+      }
 
+      /* This is where the magic starts */
       .icon-type {
-        width: 44px;
-        height: 28px;
         position: absolute;
         right: 5px;
-        top: 3px;
-        background-image: url('https://assets.braintreegateway.com/dropin/1.5.1/images/1x-s0fcd0a14c6.png');
-        background-position: -1000px 0; }
+        top: 2px;
+        width: 44px;
+        height: 28px;
+        background-image: url('https://bit.ly/1HHU5q6');
+        background-position: -1000px 0;
+      }
+
+      .icon-type-discover {
+        background-position: 0 -287px;
+      }
 
       .icon-type-visa {
-        background-position: 0 -231px; }
+        background-position: 0 -231px;
+      }
 
       .icon-type-master-card {
         background-position: 0 -203px;
+      }
+
+      .icon-type-jcb {
+        background-position: 0 -175px;
+      }
+
+      .icon-type-maestro {
+        background-position: 0 -147px;
       }
 
       .icon-type-american-express {
@@ -41,8 +67,9 @@
   </head>
   <body>
     <form id="example-form" action="index.html" method="post">
-      <span class='icon-type'></span>
-      <div id='card-number'></div>
+      <div id='card-number'>
+        <span class='icon-type'></span>
+      </div>
     </form>
 
     <script type="text/javascript">
